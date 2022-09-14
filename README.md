@@ -1,12 +1,12 @@
 <p align="center">
-  <a href="https://docs.osmosis.zone/" target="_blank">
-    <img width="180" src="https://docs.osmosis.zone/img/osmosis-logo-dark.svg" alt="logo">
+  <a href="" target="_blank">
+    <img width="180" src="https://docs.standard.tech/img/standard-logo-dark.svg" alt="logo">
   </a>
 </p>
 
 ## Documentation
 
-Check out our docs at https://docs.osmosis.zone/.
+Check out our docs at https://docs.standard.tech.
 
 ## Development Setup
 
@@ -14,7 +14,7 @@ Check out our docs at https://docs.osmosis.zone/.
 # Install all dependencies.
 yarn
 
-# Serves Osmosis' own docs with itself.
+# Serves Standard's own docs with itself.
 yarn dev
 
 # Build VuePress' own docs with itself.
@@ -23,8 +23,8 @@ yarn build
 
 ## Contribution
 
-Want to contribute? Check our [Contributing Guide](.github/CONTRIBUTING.md), [Code of Conduct](.github/CODE_OF_CONDUCT.md) and [issues for beginners](https://github.com/osmosis-labs/docs/issues)!
+Want to contribute? Check our [Contributing Guide](.github/CONTRIBUTING.md), [Code of Conduct](.github/CODE_OF_CONDUCT.md) and [issues for beginners](https://github.com/standardweb3/docs/issues)!
 
 
 ## License
-[MIT](https://github.com/osmosis-labs/docs/blob/master/LICENSE.md)
+[MIT](https://github.com/standardweb3/docs/blob/master/LICENSE.md)
