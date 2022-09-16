@@ -1,13 +1,24 @@
 ---
 title: Contracts & dApps on Standard
 ---
+
 # Building dApps on Osmosis
 
-
 ## Getting Started
+
 <div class="cards twoColumn" >
 
-  <a href="cosmwasm-localosmosis.html" class="card">
+<a href="/developing/dapps/get_started/quickstart.html" class="card" target="_blank">
+    <img src="/img/contract.svg" class="filter-icon" />
+    <div class="title">
+     Your first contract
+    </div>
+    <div class="text">
+     Kickstart your contract development in Standard 
+    </div>
+  </a>
+
+  <a href="" class="card">
     <img src="/img/ink.svg" class="filter-icon" />
     <div class="title">
      Ink! with Signac & LocalStandard
@@ -17,7 +28,7 @@ title: Contracts & dApps on Standard
     </div>
   </a>
 
-  <a href="cosmwasm-testnet-manual.html" class="card">
+  <a href="" class="card">
     <img src="/img/ink.svg" class="filter-icon" />
     <div class="title">
     Deploy Ink! Contracts to Testnet with standardd
@@ -27,7 +38,7 @@ title: Contracts & dApps on Standard
     </div>
   </a>
 
-  <a href="cosmwasm-testnet.html" class="card"> 
+  <a href="" class="card"> 
     <img src="/img/ink.svg" class="filter-icon" />
     <div class="title">
     Deploy Ink! Contracts to Testnet with Signac
@@ -37,7 +48,7 @@ title: Contracts & dApps on Standard
     </div>
   </a>
 
-  <a href="cosmwasm-verify-contract.html" class="card">
+  <a href="" class="card">
     <img src="/img/ink.svg" class="filter-icon" />
     <div class="title">
     Install Light client to connect to Standard Network
@@ -47,29 +58,19 @@ title: Contracts & dApps on Standard
     </div>
   </a>
   
-  <a href="https://github.com/osmosis-labs/contract-list" class="card" target="_blank">
+  <a href="" class="card" target="_blank">
     <img src="/img/contract.svg" class="filter-icon" />
     <div class="title">
     Standard Contract List
     </div>
     <div class="text">
-    Repository contains a list of all approved code IDs to Standard
+    Coming soon
     </div>
   </a>  
   
-  <a href="https://docs.cosmwasm.com/docs/1.0/getting-started/intro" class="card" target="_blank">
-    <img src="/img/contract.svg" class="filter-icon" />
-    <div class="title">
-     Your first contract
-    </div>
-    <div class="text">
-     Kickstart your contract development in Standard 
-    </div>
-  </a>  
   
 
-  
-  
+
  </div>
  
  
@@ -99,9 +100,10 @@ title: Contracts & dApps on Standard
    </div>
 
 ## Tools
+
  <div class="cards twoColumn" >
 
-  <a href="/developing/tools/beaker/index.html" class="card">
+  <a href="/developing/tools/signac/index.html" class="card">
     <img src="/img/signac.svg" class="filter-icon" />
     <div class="title">
     Signac
@@ -112,6 +114,5 @@ title: Contracts & dApps on Standard
   </a>
   
  </div>
-
 
 ## Networks

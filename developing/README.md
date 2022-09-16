@@ -23,7 +23,7 @@ Standard offers a variaty of places for developers to contribute in the ecosyste
      Standard Core Development
     </div>
     <div class="text">
-      Chain Developemnt, Modules and more.
+      Coming soon
     </div>
   </a>
 
@@ -33,7 +33,7 @@ Standard offers a variaty of places for developers to contribute in the ecosyste
      Standard Utilities
     </div>
     <div class="text">
-      Build Dashboards or Utilities
+      Coming soon
     </div>
   </a>
 
@@ -44,7 +44,7 @@ Standard offers a variaty of places for developers to contribute in the ecosyste
      Standard Frontend
     </div>
     <div class="text">
-     Learn about the Frontend to connect with Standard
+     Coming soon
     </div>
   </a>
 

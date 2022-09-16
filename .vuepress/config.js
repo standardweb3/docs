@@ -137,19 +137,12 @@ module.exports = {
           title: "About",
           children: [
             '/overview/',
-            '/overview/osmo',
-            '/overview/terminology',
-            '/overview/governance',
           ],
           collapsable: true,
         },
         {
           title: 'Wallets',
           children: [
-            '/overview/wallets/keplr/install-keplr',
-            '/overview/wallets/keplr/create-keplr-wallet',
-            '/overview/wallets/keplr/import-account',
-            '/overview/wallets/keplr/import-ledger-account',
           ],
           collapsable: true,
         },
@@ -159,96 +152,14 @@ module.exports = {
           title: 'Building dApps',
           children: [
             '/developing/dapps/get_started/',
-            '/developing/dapps/get_started/cosmwasm-localosmosis',
-            '/developing/dapps/get_started/cosmwasm-testnet',
-            '/developing/dapps/get_started/cosmwasm-testnet-manual',
-            '/developing/dapps/get_started/submit_wasm_proposal',
-            '/developing/dapps/get_started/cosmwasm-verify-contract',
-            '/developing/dapps/get_started/javascript',
+            '/developing/dapps/get_started/quickstart',
           ],
           collapsable: true,
         },
         {
           title: 'Tools',
           children: [
-
-            '/developing/tools/beaker/',
-            '/developing/tools/localosmosis',
-            '/developing/tools/osmojs',
-            '/developing/tools/osmosisd',
-          ],
-          collapsable: true,
-        },
-        {
-          title: 'Osmosis Core',
-          children: [
-            '/developing/osmosis-core/',
-            '/developing/osmosis-core/build',
-            '/developing/osmosis-core/ide-guide',
-            '/developing/osmosis-core/performance',
-            '/developing/osmosis-core/contributing',
-            "/developing/osmosis-core/modules/",
-            "/developing/osmosis-core/modules/spec-epochs",
-            "/developing/osmosis-core/modules/spec-gamm",
-            "/developing/osmosis-core/modules/spec-gov",
-            "/developing/osmosis-core/modules/spec-lockup",
-            "/developing/osmosis-core/modules/spec-mint",
-            "/developing/osmosis-core/modules/spec-incentives",
-            "/developing/osmosis-core/modules/spec-pool-incentives",
-            "/developing/osmosis-core/modules/spec-superfluid"
-          ],
-          collapsable: true,
-        },
-
-        // {
-        //   title: "osmosisd",
-        //   children: [
-        //     "/developing/osmosisd/commands",
-        //     "/developing/osmosisd/subcommands",
-        //   ],
-        //   collapsable: true,
-        // },
-        {
-          title: 'Networks',
-          children: [
-            '/developing/network/explorers',
-            '/developing/network/public-endpoints',
-            '/developing/tools/localosmosis',
-            '/developing/network/join-testnet',
-            '/developing/network/join-mainnet',
-          ],
-          collapsable: true,
-        },
-        {
-          title: 'Relaying',
-          children: [
-            "/developing/relaying/",
-            "/developing/relaying/relay",
-            "/developing/relaying/relayers"
-          ],
-          collapsable: true,
-        },
-        {
-        title: 'Asset Info',
-        children: [
-          "/developing/assets/asset-info",
-        ],
-        collapsable: true,
-        },
-        {
-        title: 'Key Management',
-        children: [
-          "/developing/keys/",
-          "/developing/keys/keys-cli",
-          "/developing/keys/multisig",
-          "/developing/keys/tmkms",
-        ],
-        collapsable: true,
-        },
-        {
-          title: 'Osmosis Frontend',
-          children: [
-            '/developing/web-dev-guide'
+            '/developing/tools/signac/',
           ],
           collapsable: true,
         },
@@ -259,7 +170,6 @@ module.exports = {
           ],
           collapsable: true,
         },
-
       ],
 
       "/": [

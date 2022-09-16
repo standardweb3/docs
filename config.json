@@ -1,7 +1,7 @@
 {
   "index_name": "Docs",
   "start_urls": [
-    "https://docs.osmosis.zone/"
+    "https://docs.standard.tech"
   ],
   "stop_urls": [],
   "selectors": {
