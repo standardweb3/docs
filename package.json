@@ -1,10 +1,10 @@
 {
-  "name": "osmosis-docs",
+  "name": "standard-docs",
   "version": "1.0.4",
-  "description": "Official Osmosis Documentation website",
+  "description": "Official Standard Documentation website",
   "main": "index.js",
   "authors": {
-    "name": "Osmosis Labs",
+    "name": "Standard Labs",
     "email": ""
   },
   "repository": "/osmosis",

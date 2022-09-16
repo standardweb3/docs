@@ -134,13 +134,6 @@ module.exports = {
     sidebar: {
       "/overview/": [
         {
-          title: "About",
-          children: [
-            '/overview/',
-          ],
-          collapsable: true,
-        },
-        {
           title: 'Wallets',
           children: [
           ],
@@ -162,14 +155,7 @@ module.exports = {
             '/developing/tools/signac/',
           ],
           collapsable: true,
-        },
-        {
-          title: 'Guides',
-          children: [
-            "/developing/guides/structure/transaction",
-          ],
-          collapsable: true,
-        },
+        }
       ],
 
       "/": [
