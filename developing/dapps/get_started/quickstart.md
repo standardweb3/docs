@@ -134,8 +134,16 @@ mod flipper {
 ...
 ```
 
-To build it, simply run `signac build flipper` in the root directory. 
+To build it, simply run:
+```sh
+signac build
+```
 
+Then Signac will help you choose which contract cargo to compile:
+```sh
+? 📦 Which contract cargo are you compiling with? (Use arrow keys)
+❯ flipper
+```
 
 ## Testing Your First Contract
 
@@ -173,7 +181,16 @@ Signac uses [cargo-test](https://doc.rust-lang.org/cargo/commands/cargo-test.htm
 }
 ```
 
-To test it, simply run `signac test flipper` in the root directory. 
+To build it, simply run:
+```sh
+signac test
+```
+
+Then Signac will help you choose which contract cargo to test:
+```sh
+? 📦 Which contract cargo are you testing with? (Use arrow keys)
+❯ flipper
+```
 
 Congrats! You have created a project and compiled, tested a smart contract.
 
