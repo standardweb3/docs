@@ -28,16 +28,6 @@ title: Contracts & dApps on Standard
     </div>
   </a>
 
-  <a href="" class="card">
-    <img src="/img/ink.svg" class="filter-icon" />
-    <div class="title">
-    Deploy Ink! Contracts to Testnet with standardd
-    </div>
-    <div class="text">
-      Coming soon
-    </div>
-  </a>
-
   <a href="" class="card"> 
     <img src="/img/ink.svg" class="filter-icon" />
     <div class="title">
@@ -51,7 +41,7 @@ title: Contracts & dApps on Standard
   <a href="" class="card">
     <img src="/img/ink.svg" class="filter-icon" />
     <div class="title">
-    Install Light client to connect to Standard Network
+    Connect to Standard with Standard light client
     </div>
     <div class="text">
       Coming soon

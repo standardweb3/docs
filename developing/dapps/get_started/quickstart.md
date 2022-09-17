@@ -1,34 +1,25 @@
 # Your fist Ink! contract
 
+## Initial setup
 
-## Quickstart guide
+This tutorial uses a Standard specific development suite called Signac.
 
-Signac is a Standard's development environment for smart contracts.
+Signac will help you:
 
-This guide will walk you through setting up your environment, installing Signac, and using the testnet or [LocalStandard]() to interact with a network.
-
-For more information on Signac, visit [Signac's docs](/developing/tools/signac.html).
-
-
-# Initial setup
-
-This tutorial uses a Osmosis specific development suite called Membrane.
-
-Membrane will help you:
-
-* Scaffold your dApp project
-* Develop and deploy smart contracts
-* Create custom tasks for blockchain and contract interaction
-* Create predefined functions used in tasks and in the console
+* **`Scaffold your dApp project`**
+* **`Develop and deploy smart contracts`**
+* **`Create custom tasks for blockchain and contract interaction`**
+* **`Create predefined functions used in tasks and in the console`**
+* **`Make CI faster using cloud builds`**
 
 ## Prerequisites
 
 - [Install NPM](https://www.npmjs.com/)
 - [Install Node JS v16](https://nodejs.org/download/release/latest-v16.x/)
 
-## 1. Set up Rust
+## Set up Rust
 
-Rust is the main programming language used for CosmWasm smart contracts. While WASM smart contracts can theoretically be written in any programming language, CosmWasm libraries and tooling work best with Rust.
+Rust is the main programming language used for Ink! smart contracts. While WASM smart contracts can theoretically be written in any programming language, Ink! libraries and tooling work best with Rust.
 
 First, install the latest version of [Rust](https://www.rust-lang.org/tools/install).  
 
@@ -45,64 +36,149 @@ rustup target add wasm32-unknown-unknown
 
 # 3. Install the following packages to generate the contract:
 
-curl -s http://server/path/script.sh | bash -s 
+curl -s https://raw.githubusercontent.com/standardweb3/signac/main/install-cargo-contract.sh | bash -s 
 ```
 
-## 2. Install Signac
+## Install Signac
 
-Use npm to install the Membrane command-line tool globally:
+Use npm to install the Signac command-line tool globally:
 
 ```sh
-npm install -g @standardweb3/signac
+npm install -g signac
 ```
 
-## 3. Scaffold your dApp
+Now Signac is ready to use!
 
+## Scaffold Your dApp Workspace
 
-#### Project structure
+To create the sample project, run `signac` in your project folder.
 
-The following structure shows your scaffolded project:
+![](./assets/signac-init.svg)
+
+Let's **create a workspace with a starter Ink! contract**.
+
+*What things will be placed when a workspace is initialized? Let's have a look 👀*
 
 ```
 .
-├── example              # example
-│   ├── example
-│   └── ...              # example
+├── contracts   # smart contract directory
+|  ├── ...  # Ink! smart contract cargo  
+├── Cargo.toml # Workspace TOML file
+├── signac.config.js # Cofiguration file for Signac
+├── nx.json 
+└── workspace.json  
+```
+#### contracts
+These should be self explanatory, it's where contracts are stored. And as you might be able to guess from the name, one project can contain multiple contracts thanks to workspace. Each contract is managed as one cargo in the directory, and other commands refer to the directory name in the directory.
+
+#### signac.config.js
+This is our configuration file, you can find more information about it [here]().
+
+#### Cargo.toml
+There is a Cargo.toml here which specifies [cargo workspace](https://doc.rust-lang.org/book/ch14-03-cargo-workspaces.html).
+
+#### nx.json and workspace.json
+
+These are [Nx](https://nx.dev/getting-started/intro)'s configuration file, but these are automatically managed from Signac. <br>*You do not need to edit it unless you understand how Nx works.*
+
+## Building Your First Contract
+
+Next, if you take a look in the `contracts/` folder, you'll see `flipper` contract cargo's `src/lib.rs`:
+
+```Rust
+#![cfg_attr(not(feature = "std"), no_std)]
+
+use ink_lang as ink;
+
+#[ink::contract]
+mod flipper {
+
+    /// Defines the storage of your contract.
+    /// Add new fields to the below struct in order
+    /// to add new static storage fields to your contract.
+    #[ink(storage)]
+    pub struct Flipper {
+        /// Stores a single `bool` value on the storage.
+        value: bool,
+    }
+
+    impl Flipper {
+        /// Constructor that initializes the `bool` value to the given `init_value`.
+        #[ink(constructor)]
+        pub fn new(init_value: bool) -> Self {
+            Self { value: init_value }
+        }
+
+        /// Constructor that initializes the `bool` value to `false`.
+        ///
+        /// Constructors can delegate to other constructors.
+        #[ink(constructor)]
+        pub fn default() -> Self {
+            Self::new(Default::default())
+        }
+
+        /// A message that can be called on instantiated contracts.
+        /// This one flips the value of the stored `bool` from `true`
+        /// to `false` and vice versa.
+        #[ink(message)]
+        pub fn flip(&mut self) {
+            self.value = !self.value;
+        }
+
+        /// Simply returns the current value of our `bool`.
+        #[ink(message)]
+        pub fn get(&self) -> bool {
+            self.value
+        }
+    }
+...
 ```
 
-#### 4. Deploy
-
-WIP
-
-#### 3. Interact with the deployed contract
+To build it, simply run `signac build flipper` in the root directory. 
 
 
-#### 4. Front-end scaffolding
+## Testing Your First Contract
 
-Membrane also scaffolds a very simple front-end:
+Signac uses [cargo-test](https://doc.rust-lang.org/cargo/commands/cargo-test.html) to test each contract cargo. It will automatically find test codes with keyword `[test]`. In the flipper contract cargo, you will see test code within `src/lib.rs` file.
 
-:::: warning
-WIP, this integration with Keplr will need some work.
-::::
+```Rust
+...
+    /// Unit tests in Rust are normally defined within such a `#[cfg(test)]`
+    /// module and test functions are marked with a `#[test]` attribute.
+    /// The below code is technically just normal Rust code.
+    #[cfg(test)]
+    mod tests {
+        /// Imports all the definitions from the outer scope so we can use them here.
+        use super::*;
 
-1. Open the [Osmosis Keplr extension](https://chrome.google.com/webstore/detail/keplr/dmkamcknogkgcdfhhbddcghachkejeap?hl=en), click the gear icon, and switch the network to LocalOsmosis. If you have not added localOsmosis to your keplr yet, follow the instrcutions [here](#configure-keplr-with-localosmosis)
+        /// Imports `ink_lang` so we can use `#[ink::test]`.
+        use ink_lang as ink;
 
-2. To use the front end, run the following commands in order. The `membrane sync-refs` command copies your deployed contract addresses to the front-end part of the codebase.
+        /// We test if the default constructor does its job.
+        #[ink::test]
+        fn default_works() {
+            let flipper = Flipper::default();
+            assert_eq!(flipper.get(), false);
+        }
 
-   ```
-   membrane sync-refs
-   cd frontend
-   npm install
-   npm start
-   ```
+        /// We test a simple use case of our contract.
+        #[ink::test]
+        fn it_works() {
+            let mut flipper = Flipper::new(false);
+            assert_eq!(flipper.get(), false);
+            flipper.flip();
+            assert_eq!(flipper.get(), true);
+        }
+    }
+}
+```
 
-3. Open the Keplr wallet extension and click **Add a wallet**. Click **Recover wallet** and input the following seed phrase to access the sole validator on the LocalOsmosis network and gain funds to get started with smart contracts:
+To test it, simply run `signac test flipper` in the root directory. 
 
-   ```
-   satisfy adjust timber high purchase tuition stool faith fine install that you unaware feed domain license impose boss human eager hat rent enjoy dawn
-   ```
+Congrats! You have created a project and compiled, tested a smart contract.
 
-4. With LocalOsmosis selected in Osmosis Station and the local seed phrase imported, you can now increment and reset the counter from the front end.
+Show us some love by starring [our repository on GitHub](https://github.com/standardweb3/docs)!️
+
 
 #### Demo
 
