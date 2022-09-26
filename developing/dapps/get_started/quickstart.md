@@ -1,4 +1,4 @@
-# Your fist Ink! contract
+# Your first Ink! contract
 
 ## Initial setup
 
