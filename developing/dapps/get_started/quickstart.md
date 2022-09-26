@@ -122,7 +122,5 @@ Show us some love by starring [our repository on GitHub](https://github.com/stan
 
 #### Demo
 
-:::: warning
-WIP, this demo needs work.
-::::
+<embed src="https://vumu.io/share/embed/6331629ffa4182d5e22002e2" type="video/mp4" width="640" height="360" allowscriptaccess="always" allowfullscreen="true"></embed>
 
