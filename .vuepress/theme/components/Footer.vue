@@ -40,10 +40,10 @@
           <a href="https://docsend.com/view/9mvr5qq" target="_blank">Decks</a>
         </li> -->
         <li>
-          <a href="https://medium.com/@Osmosis" target="_blank">Medium</a>
+          <a href="https://medium.com/@standardweb3" target="_blank">Medium</a>
         </li>
         <li>
-          <a href="https://commonwealth.im/osmosis/" target="_blank">Commonwealth</a>
+          <a href="https://commonwealth.im/standardweb3/" target="_blank">Commonwealth</a>
         </li>
       </ul>
       <ul class="developers">
@@ -85,25 +85,25 @@
         <a href="https://discord.gg/qw9PZEavCC" rel="noopener" target="_blank">
           <img
             src="/img/discord.svg"
-            alt="link to Osmosis discord room"
+            alt="link to Standard discord room"
           />
         </a>
         <a href="https://medium.com/@standard-protocol" rel="noopener" target="_blank">
           <img
             src="/img/medium.svg"
-            alt="link to Osmosis medium"
+            alt="link to Standard medium"
           />
         </a>
         <a href="https://twitter.com/standardweb3" rel="noopener" target="_blank">
           <img
             src="/img/twitter.svg"
-            alt="link to Osmosis twitter"
+            alt="link to Standard twitter"
           />
         </a>
         <a href="https://www.youtube.com/channel/UCvO0HBKWt_k7Z8VT97otEKQ" rel="noopener" target="_blank">
           <img
             src="/img/icon_youtube.png"
-            alt="link to Osmosis youtube"
+            alt="link to Standard youtube"
           />
         </a>
         <a href="" rel="noopener" target="_blank">
