@@ -116,9 +116,9 @@ module.exports = {
     docsBranch: 'main',
     docsDir: "",
     algolia: {
-      apiKey: "a95b2bd527cd60164d4e6e26c15fc4d1", //TODO GET KEY
-      indexName: "Docs",
-      appId: "YQ6N23UJAN"
+      apiKey: "3e6613d968e846a6c3e9369b8aae288f", //TODO GET KEY
+      indexName: "Standard docs",
+      appId: "CVLCSSZAGD"
       // If Algolia did not provided you any `appId`, use `BH4D9OD16A` or remove this option
     },
     nav: [
