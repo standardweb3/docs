@@ -153,6 +153,7 @@ module.exports = {
           title: 'Tools',
           children: [
             '/developing/tools/signac/',
+            '/developing/tools/signac/CONTRIBUTING'
           ],
           collapsable: true,
         }
