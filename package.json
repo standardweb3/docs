@@ -7,7 +7,7 @@
     "name": "Standard Labs",
     "email": ""
   },
-  "repository": "/osmosis",
+  "repository": "/standard",
   "scripts": {
     "dev": "vuepress dev",
     "build": "vuepress build"

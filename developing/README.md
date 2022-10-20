@@ -17,7 +17,7 @@ Standard offers a variaty of places for developers to contribute in the ecosyste
     </div>
   </a>
 
-  <a href="/developing/osmosis-core/" class="card">
+  <a href="/developing/standard-core/" class="card">
     <img src="/img/ide.svg" class="filter-icon" />
     <div class="title">
      Standard Core Development

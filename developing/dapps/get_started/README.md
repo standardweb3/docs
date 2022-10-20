@@ -2,7 +2,7 @@
 title: Contracts & dApps on Standard
 ---
 
-# Building dApps on Osmosis
+# Building dApps on Standard
 
 ## Getting Started
 

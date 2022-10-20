@@ -66,10 +66,10 @@ Explore our guides and code examples to integrate and build on Standard.
      Discord
     </div>
     <div class="text">
-      Chat with the Osmosis community on Discord
+      Chat with the Standard community on Discord
     </div>
   </a>
-  <a href="https://github.com/osmosis-labs/docs" class="card lg" target="_blank">
+  <a href="https://github.com/standardweb3/docs" class="card lg" target="_blank">
     <img src="img/github.svg">
     <div class="title">
     Found an Issue?

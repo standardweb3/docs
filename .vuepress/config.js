@@ -96,7 +96,7 @@ module.exports = {
       "meta",
       {
         property:"og:image",
-        content:"/img/osmosis-tile.png",
+        content:"/img/standard-tile.png",
       },
     ],
   ],
