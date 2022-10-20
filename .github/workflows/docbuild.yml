@@ -14,6 +14,10 @@ jobs:
       - name: Download Latest Signac repo README
         run: curl https://raw.githubusercontent.com/standardweb3/signac/main/README.md > developing/tools/signac/README.md
 
+      - name: Download Latest Signac repo CONTRIBUTING
+        run: curl https://raw.githubusercontent.com/standardweb3/signac/main/CONTRIBUTING.md > developing/tools/signac/CONTRIBUTING.md
+
+
       - name: Install and Build 🔧 # This will create version inside the 'build' folder.
         run: |
           npm install
